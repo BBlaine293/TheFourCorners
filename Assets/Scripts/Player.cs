@@ -14,15 +14,22 @@ public class Player : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0)) 
         {
             gunAnim.SetBool("IsFiring", true);
         }
+        else if (Input.GetMouseButton(1))
+        {
+            gunAnim.SetBool("IsFiring", true);
+        }
+
+
         else
         {
             gunAnim.SetBool("IsFiring", false);
         }
     }
+
     public void SendHealthData(int health)
     {
         if (OnUpdateHealth != null)
@@ -33,3 +40,4 @@ public class Player : MonoBehaviour
         }
 
 
+ 
