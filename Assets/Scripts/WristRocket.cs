@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Weapon : MonoBehaviour
+public class WristRocket : MonoBehaviour
 {
-    public GameObject bulletPrefab;
-    public Transform bulletSpawn;
+    
+    public GameObject RocketPrefab;
+    public Transform RocketSpawn;
     public float fireTime = 0.5f;
+
+    public int rocketAmmo = 2;
+
     private bool isFiring = false;
     private void SetFiring()
     {
@@ -14,8 +18,15 @@ public class Weapon : MonoBehaviour
     }
     private void Fire()
     {
+        if (rocketAmmo <= 0)
+        {
+            return;
+        }
+
+        rocketAmmo--;
+
         isFiring = true;
-        Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
+        Instantiate(RocketPrefab, RocketSpawn.position, RocketSpawn.rotation);
         if (GetComponent<AudioSource>() != null)
         {
             GetComponent<AudioSource>().Play();
@@ -24,14 +35,13 @@ public class Weapon : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonDown(1))
         {
             if (!isFiring)
             {
                 Fire();
             }
 
-      }
+        }
     }
 }
-
