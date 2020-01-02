@@ -10,7 +10,7 @@ public class MoveTowardsObject : MonoBehaviour
     {
         if (target != null)
         {
-            transform.position = Vector3.MoveTowards(transform.position, target.position, speed * 0.01f);
+            transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         }
     }
     public void SetTarget(Transform newTarget)
