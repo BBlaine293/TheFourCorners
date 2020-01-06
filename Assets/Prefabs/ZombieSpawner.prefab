@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4930138250720881704}
   - component: {fileID: 4930138250720881707}
   - component: {fileID: 4930138250720881706}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ZombieSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 783bab1b1a45da54f998cdd2d2102a25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 1
-  repeat: 0
+  time: 10
+  repeat: 1
   onTimerComplete:
     m_PersistentCalls:
       m_Calls:
@@ -74,5 +74,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 349e2488f3191524594a29062153ec35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabToSpawn: {fileID: 0}
+  prefabToSpawn: {fileID: 3593081771903576120, guid: 4f1843a4945357548a91805693535a79,
+    type: 3}
   adjustmentAngle: 0

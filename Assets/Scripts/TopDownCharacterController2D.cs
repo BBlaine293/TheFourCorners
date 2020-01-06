@@ -19,5 +19,18 @@ public class TopDownCharacterController2D : MonoBehaviour {
         float y = Input.GetAxis("Vertical");
         rigidbody2D.velocity = new Vector2(x, y) * speed;
         rigidbody2D.angularVelocity = 0.0f;
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            StartCoroutine("DashMove");
+        }
+
+    }
+
+    IEnumerator DashMove()
+    {
+        speed += 20;
+        yield return new WaitForSeconds(0.25f);
+        speed -= 20;
     }
 }

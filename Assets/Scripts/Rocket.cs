@@ -20,7 +20,9 @@ public class Rocket : MonoBehaviour
     {
         
             Instantiate(explosion, rocket.position, transform.rotation = Quaternion.identity);
-            other.transform.SendMessage("TakeDamage", damage, SendMessageOptions.DontRequireReceiver);
+        other.transform.SendMessage("TakeDamage", damage, SendMessageOptions.DontRequireReceiver);
+       
+        
             Die();
             Destroy(gameObject);
         

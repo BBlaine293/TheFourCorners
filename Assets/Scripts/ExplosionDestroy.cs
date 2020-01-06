@@ -6,6 +6,7 @@ public class ExplosionDestroy : MonoBehaviour
 {
     void FixedUpdate()
     {
+        
         Destroy(gameObject, 0.5f);
     }
 }

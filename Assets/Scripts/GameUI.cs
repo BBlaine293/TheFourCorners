@@ -7,6 +7,7 @@ public class GameUI : MonoBehaviour
 {
     public Slider healthBar;
     public Text scoreText;
+    
     public int playerScore = 0;
     private void OnEnable()
     {
@@ -27,6 +28,8 @@ public class GameUI : MonoBehaviour
         playerScore += theScore;
         scoreText.text = "SCORE: " + playerScore.ToString();
     }
+
+    
 }
 
 
