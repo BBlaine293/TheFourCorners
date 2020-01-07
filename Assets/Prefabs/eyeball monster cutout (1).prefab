@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d143ee63d364f74a905ccd6d8dd858b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 8
+  health: 4
   maxhealth: 10
   onDie:
     m_PersistentCalls:
@@ -289,7 +289,7 @@ MonoBehaviour:
   eyebeam: {fileID: 5950451562332510314, guid: 15737c6868442ed4ab4662d26aa3490d, type: 3}
   Player: {fileID: 0}
   firepoint: {fileID: 6529815496168759555}
-  waitbetweenbeams: 2
+  waitbetweenbeams: 3
 --- !u!1 &6529815496168759554
 GameObject:
   m_ObjectHideFlags: 0

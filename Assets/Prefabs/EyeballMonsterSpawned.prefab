@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 783bab1b1a45da54f998cdd2d2102a25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 8
+  time: 12
   repeat: 1
   onTimerComplete:
     m_PersistentCalls:
